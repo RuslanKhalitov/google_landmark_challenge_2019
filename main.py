@@ -27,7 +27,7 @@ MIN_SAMPLES_PER_CLASS = 50
 BATCH_SIZE = 512 # depends on the card memory and the images resolution
 LEARNING_RATE = 2e-4 # already used [5e-5, 1e-4, 3e-4, 4e-4]
 LR_STEP = 3 
-LR_FACTOR = 0.33 # for Adam optimization
+LR_FACTOR = 0.33 # for the Adam optimizer
 NUM_WORKERS = multiprocessing.cpu_count() # for the parallel inference
 MAX_STEPS_PER_EPOCH = 15000
 NUM_EPOCHS = 2 ** 32
@@ -39,7 +39,7 @@ TIME_LIMIT = 9 * 60 * 60 # used for training into the Kaggle kernels
 #The dataset preparation
 class ImageDataset(torch.utils.data.Dataset):
     '''
-    This class cconsists of three main functions:
+    This class consists of three main functions:
     '''
     def __init__(self, dataframe: pd.DataFrame, mode: str) -> None:
         print(f'creating data loader - {mode}')
