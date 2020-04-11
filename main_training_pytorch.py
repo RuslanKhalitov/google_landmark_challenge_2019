@@ -144,7 +144,7 @@ def load_data() -> 'Tuple[DataLoader[np.ndarray], DataLoader[np.ndarray], LabelE
     torch.multiprocessing.set_sharing_strategy('file_system')
     cudnn.benchmark = True
 
-    # only use classes which have at least MIN_SAMPLES_PER_CLASS samples
+    # Include in the training process the classes with at least MIN_SAMPLES_PER_CLASS samples
     print('loading data...')
     df = pd.read_csv('../input/google-landmarks-2019-64x64-part1/train.csv')
     df.drop(columns='url', inplace=True)
