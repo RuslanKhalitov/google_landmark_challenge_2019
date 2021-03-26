@@ -1,5 +1,9 @@
 #!/usr/bin/env python
 
+"""
+This is a modified fork of the amazing kernel made by https://www.kaggle.com/artyomp
+Link: https://www.kaggle.com/artyomp/resnet50-baseline
+"""
 # Packages import
 import multiprocessing
 import os
